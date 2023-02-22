@@ -38,6 +38,9 @@ public class CartController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id){
         cartRepository.deleteById(id);
-    
-}
+    }
+    @DeleteMapping("/deleteall")
+    public void deleteAll(){
+         cartRepository.deleteAll();
+    }
 }
